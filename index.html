@@ -4,7 +4,7 @@
  <meta property="og:locale" content="ar_AR">
 <meta property="og:type" content="website">
 <meta property="og:title" content="بوابة دليل الطالب قسم المحاسبة">
-<meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشرحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
+<meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
 <meta property="og:url" content="https://abdalmged7129-rgb.github.io/muhasib"> <!-- رابط الصفحة -->
 <meta property="og:image" content="https://i.imgur.com/dR3oOBY.png">
 <meta property="og:image:alt" content="شعار بوابة دليل الطالب">
@@ -17,220 +17,268 @@
 
   <style>
     /* ضع هنا كود CSS القديم، مثال: */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: "Tahoma", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #f9f9f9, #e6f2ff);
-      color: #222;
-    }
+    /* إعدادات عامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #ddd;
-      flex-wrap: wrap;
-      text-align: center;
-    }
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* يمنع أي انزلاق أفقي */
+  background: linear-gradient(to bottom, #e0f7ff, #e6e0ff);
+  font-family: "Tahoma", sans-serif;
+  color: #222;
+}
 
-    .top-bar img {
-      width: 40px;
-      height: auto;
-    }
+/* إزالة أي عناصر ضيقة تسبب خطوط */
+body * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
-    .top-bar h1 {
-      font-size: 4vw;
-      margin: 0;
-      color: #004080;
-      max-width: 90%;
-      word-wrap: break-word;
-    }
+body::before,
+body::after,
+*::before,
+*::after {
+  content: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
-    .welcome {
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 0 15px;
-      line-height: 1.8;
-      font-size: 16px;
-      text-align: center;
-    }
+/* الشريط العلوي */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(to right, #cce6ff, #d9ccff);
+  flex-wrap: wrap;
+  text-align: center;
+}
 
-    .video-box {
-      max-width: 560px;
-      margin: 20px auto;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
+.top-bar img {
+  width: 40px;
+  height: auto;
+}
 
-    .video-box iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      display: block;
-    }
+.top-bar h1 {
+  font-size: 4vw;
+  color: #5a00b0;
+  max-width: 90%;
+  word-wrap: break-word;
+}
 
-    .card {
-      background: #fff;
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+/* قسم الترحيب */
+.welcome {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  font-size: 17px;
+  text-align: center;
+  color: #333;
+}
 
-    .card h2 {
-      color: #004080;
-      margin-bottom: 10px;
-    }
+/* صندوق الفيديو */
+.video-box {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
-    .card p {
-      font-style: italic;
-      color: #555;
-      line-height: 1.6;
-    }
+.video-box iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
 
-    .btn-enter {
-      display: inline-block;
-      margin: 30px auto;
-      padding: 12px 25px;
-      background: #004080;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* البطاقة */
+.card {
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
 
-    .btn-enter:hover {
-      background: #0066cc;
-    }
+.card h2 {
+  color: #5a00b0;
+  margin-bottom: 12px;
+}
 
-    #fixed-countdown {
-      position: fixed;
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 14px;
-      font-weight: bold;
-      color: black;
-      z-index: 9999;
-      background: none;
-    }
+.card p {
+  font-style: italic;
+  color: #666;
+  line-height: 1.6;
+}
 
-    @media (max-width: 600px) {
-      .top-bar h1 {
-        font-size: 5vw;
-      }
+/* زر الدخول */
+.btn-enter {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 14px 30px;
+  background: linear-gradient(to right, #5a00b0, #0099cc);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
 
-      .btn-enter {
-        width: 90%;
-      }
+.btn-enter:hover {
+  background: linear-gradient(to right, #7a33cc, #00bfff);
+}
 
-      .card {
-        padding: 15px;
-      }
+/* العد التنازلي */
+#fixed-countdown {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #5a00b0;
+  z-index: 9999;
+  background: rgba(255,255,255,0.8);
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  width: max-content;
+}
 
-      .video-box iframe {
-        height: 220px;
-      }
-    }
+/* استجابة للجوال */
+@media (max-width: 600px) {
+  .top-bar h1 {
+    font-size: 6vw;
+  }
+
+  .btn-enter {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .welcome {
+    font-size: 15px;
+  }
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(to right, #cce6ff, #d9ccff);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.top-bar img {
+  width: 100px; /* حجم أكبر للشعار */
+  height: auto;
+}
+
+.top-bar h1 {
+  font-size: 22px;
+  color: #5a00b0;
+  margin: 0;
+}
   </style>
 </head>
 <body>
 
-   <section style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
- <img src="https://i.imgur.com/dR3oOBY.png="شعار الجامعة" style="width:100px; height:auto;">
+    <section class="top-bar">
+    <img src="https://i.imgur.com/UwPMIAg.png="شعار الجامعة">
+    <h1>بوابة دليل الطالب قسم المحاسبة</h1>
+  </section>
 
-
-  <h1 style="font-size: 16px; margin: 0;">بوابة دليل الطالب قسم المحاسبة</h1>
-</section>
   <div class="welcome">
     <h2>مرحباً بكم أعزائنا الطلاب 👋</h2>
     <p>
-      "هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة، 
-حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية،والقنوات التعلمية على مواقع التواصل الاجتماعي ,
- والجداول الزمنية، ومعرفة كل جديد، إضافةً إلى شروحات ووسائل مساعدة متعددة لخدمة الطلاب وتوضيح ما يحتاجونه من تسهيل التواصل مع إدارة الجامعة ومع الزملاء 
-الطلاب. ونؤكد أن هذا العمل اجتهاد طلابي وليس له أي صلة رسمية بإدارة الجامعة.👇"
+      هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة، حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية، والقنوات التعليمية، والجداول الزمنية، ومعرفة كل جديد، إضافةً إلى شروحات ووسائل مساعدة متعددة. نؤكد أن هذا العمل اجتهاد طلابي وليس له أي صلة رسمية بإدارة الجامعة.
     </p>
   </div>
+
   <section>
     <div class="card">
       <h2>تنويه من المصمم</h2>
-<strong>
       <p>
         إخواني وزملائي الكرام 🌹، هذا الملف من تصميم أخوكم وزميلكم
         <strong style="color: red;">عبدالمجيد المنيعي</strong>، أسأل الله أن أكون قد وفّقت في خدمتكم بما أستطيع.
-       <p>وأخصّ بالشكر الزملاء<strong style="color: red;"> محمد منير، سالم، صادق, إيلاف، وإيمان </strong>على دعمهم ومساهمتهم في إنجاز هذا المشروع وأرجو منكم الدعاء لنا بظهر الغيب...<br>
-        لأي ملاحظات، إضافات، أو طلب تعديل على أي مادة أو ملف، يمكنكم التواصل مع مسؤول البوابة عبد المجيد المنيعي على الرقم <br>
-        <a href="https://wa.me/966535378082" target="_blank" style="text-decoration:none;">
-  <span style="display:inline-block; background-color:#e6f3ff; padding:6px 10px; border-radius:6px; color:#007bff; font-weight:bold;">
-    <strong>📱للتواصل اضغط هنا</strong>
-  </span>
-</a>
-<p>أو التواصل مع أحد مشرفي قروبات الواتس الظاهرة أرقامهم داخل البوابه <p>
-        <p>انتقل الا اسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة👇<p>  
-</strong>
+      </p>
+      <p>
+        وأخصّ بالشكر الزملاء <strong style="color: red;">محمد منير، سالم، صادق، إيلاف، وإيمان</strong> على دعمهم ومساهمتهم في إنجاز هذا المشروع. وأرجو منكم الدعاء لنا بظهر الغيب.
+      </p>
+      <p>
+        لأي ملاحظات أو طلب تعديل، يمكنكم التواصل مع مسؤول البوابة عبدالمجيد المنيعي عبر:
+      </p>
+      <a href="https://wa.me/966535378082" target="_blank" style="text-decoration:none;">
+        <span style="display:inline-block; background-color:#e6f3ff; padding:6px 10px; border-radius:6px; color:#007bff; font-weight:bold;">
+          📱 للتواصل اضغط هنا
+        </span>
+      </a>
+      <p>أو التواصل مع أحد مشرفي قروبات الواتساب الظاهرة أرقامهم داخل البوابة.</p>
+      <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
+
       <nav>
         <a href="https://abdalmged71298-web.github.io/Accounting-majo/" class="btn-enter">دخول إلى البوابة</a>
       </nav>
-<div style="background-color:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#856404; font-size:18px; font-weight:bold; text-align:center; position:relative;">
-  ⚠️ <span style="font-size:20px;">تنبيه هام</span><br><br>
-  لطلب فتح حساب الرجاء التواصل مع أحد مشرفي قروبات المحاسبة وتزويدهم بالمعلومات اللازمة.
-  <div style="position:absolute; top:-10px; right:-10px; background-color:#ffc107; color:#fff; padding:5px 10px; border-radius:50px; font-size:14px; font-weight:bold;">
-    مهم
-  </div>
-</div>
+
+      <div style="background-color:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#856404; font-size:18px; font-weight:bold; text-align:center; position:relative;">
+        ⚠️ <span style="font-size:20px;">تنبيه هام</span><br><br>
+        لطلب فتح حساب الرجاء التواصل مع أحد مشرفي قروبات المحاسبة وتزويدهم بالمعلومات اللازمة.
+        <div style="position:absolute; top:-10px; right:-10px; background-color:#ffc107; color:#fff; padding:5px 10px; border-radius:50px; font-size:14px; font-weight:bold;">
+          مهم
+        </div>
+      </div>
     </div>
   </section>
-  <div id="fixed-countdown"></div>
-<div class="video-box">
-    <iframe  src="https://drive.google.com/file/d/1hl6JFYSytILo0vgqZphgshsBUU7VYn6A/preview" =drivesdk=drive_link="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <div class="video-box">
+    <iframe src="https://drive.google.com/file/d/1hl6JFYSytILo0vgqZphgshsBUU7VYn6A
+/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 
-
   <!-- عداد تنازلي ثابت أعلى الصفحة -->
-<div id="fixed-countdown" style="
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  z-index: 9999;
-  text-align: center;">
-</div>
+  <div id="fixed-countdown"></div>
 
-<script>
-// التاريخ المحدد للاختبار (عدله حسب الحاجة)
-const examDate = new Date("12 6, 2025 1:00:00").getTime();
-const fixedCountdown = document.getElementById("fixed-countdown");
+  <script>
+    // التاريخ المحدد للاختبار (عدله حسب الحاجة)
+    const examDate = new Date("December 6, 2025 01:00:00").getTime();
+    const fixedCountdown = document.getElementById("fixed-countdown");
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = examDate - now;
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = examDate - now;
 
-  if (distance < 0) {
-    fixedCountdown.innerHTML = "✅ انتهت فترة الاختبارات";
-    return;
-  }
+      if (distance < 0) {
+        fixedCountdown.innerHTML = "✅ انتهت فترة الاختبارات";
+        return;
+      }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  fixedCountdown.innerHTML = 
-    `🕒 الوقت المتبقي للاختبارات: ${days} يوم `;
-}, 1000);
-</script>
+      fixedCountdown.innerHTML =
+        `🕒 الوقت المتبقي للاختبارات: ${days} يوم`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
