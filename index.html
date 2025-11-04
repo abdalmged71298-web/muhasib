@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
- <meta property="og:locale" content="ar_AR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="بوابة دليل الطالب قسم المحاسبة">
-<meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
-<meta property="og:url" content="https://abdalmged7129-rgb.github.io/muhasib"> <!-- رابط الصفحة -->
-<meta property="og:image" content="https://i.imgur.com/dR3oOBY.png">
-<meta property="og:image:alt" content="شعار بوابة دليل الطالب">
+  <meta charset="UTF-8">
+  <title>بوابة دليل الطالب قسم المحاسبة</title>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="بوابة دليل الطالب قسم المحاسبة">
-<meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشرحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
-<meta name="twitter:image" content="https://i.imgur.com/dR3oOBY.png">
+  <!-- Open Graph -->
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="بوابة دليل الطالب قسم المحاسبة">
+  <meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
+  <meta property="og:url" content="https://abdalmged7129-rgb.github.io/muhasib">
+  <meta property="og:image" content="https://i.imgur.com/dR3oOBY.png">
+  <meta property="og:image:alt" content="شعار بوابة دليل الطالب">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="بوابة دليل الطالب قسم المحاسبة">
+  <meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
+  <meta name="twitter:image" content="https://i.imgur.com/dR3oOBY.png">
+  <meta name="twitter:image:alt" content="شعار بوابة دليل الطالب">
+</head>
   <style>
-    /* ضع هنا كود CSS القديم، مثال: */
-    /* إعدادات عامة */
+   /* إعدادات عامة */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,27 +30,10 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* يمنع أي انزلاق أفقي */
+  overflow-x: hidden;
   background: linear-gradient(to bottom, #e0f7ff, #e6e0ff);
   font-family: "Tahoma", sans-serif;
   color: #222;
-}
-
-/* إزالة أي عناصر ضيقة تسبب خطوط */
-body * {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-body::before,
-body::after,
-*::before,
-*::after {
-  content: none !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 /* الشريط العلوي */
@@ -54,7 +41,7 @@ body::after,
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   padding: 15px;
   background: linear-gradient(to right, #cce6ff, #d9ccff);
   flex-wrap: wrap;
@@ -62,15 +49,14 @@ body::after,
 }
 
 .top-bar img {
-  width: 40px;
+  width: 150px;
   height: auto;
 }
 
 .top-bar h1 {
-  font-size: 4vw;
+  font-size: 35px;
   color: #5a00b0;
-  max-width: 90%;
-  word-wrap: break-word;
+  margin: 0;
 }
 
 /* قسم الترحيب */
@@ -105,10 +91,11 @@ body::after,
   background: #ffffff;
   margin: 30px auto;
   padding: 25px;
-  max-width: 700px;
+  max-width: 800px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   text-align: center;
+  font-size: 17px;
 }
 
 .card h2 {
@@ -124,20 +111,36 @@ body::after,
 
 /* زر الدخول */
 .btn-enter {
-  display: inline-block;
-  margin: 30px auto;
-  padding: 14px 30px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px 35px;
   background: linear-gradient(to right, #5a00b0, #0099cc);
   color: white;
-  font-size: 17px;
+  font-size: 30px;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
+  text-align: center;
   transition: 0.3s ease;
+  width: 50%;
 }
 
 .btn-enter:hover {
   background: linear-gradient(to right, #7a33cc, #00bfff);
+}
+
+/* تبويب رقم التواصل */
+a[href*="wa.me"] span {
+  font-size: 20px;
+  padding: 20px 25px;
+  display: block;
+  text-align: center;
+  width: 30%;
+  margin: 15px auto;
+  background-color: #e6f3ff;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 8px;
 }
 
 /* العد التنازلي */
@@ -146,63 +149,67 @@ body::after,
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 15px;
+  font-size: 25px;
   font-weight: bold;
   color: #5a00b0;
   z-index: 9999;
   background: rgba(255,255,255,0.8);
-  padding: 5px 10px;
+  padding: 10px 16px;
   border-radius: 8px;
+  text-align: center;
+  width: 40%;
   white-space: nowrap;
-  width: max-content;
 }
 
 /* استجابة للجوال */
 @media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
+  }
+
+  .top-bar img {
+    width: 100px;
+  }
+
   .top-bar h1 {
-    font-size: 6vw;
-  }
-
-  .btn-enter {
-    width: 90%;
-    font-size: 16px;
-  }
-
-  .card {
-    padding: 20px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.5;
   }
 
   .welcome {
-    font-size: 15px;
+    font-size: 18px;
+    padding: 0 15px;
   }
-}
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  padding: 15px;
-  background: linear-gradient(to right, #cce6ff, #d9ccff);
-  flex-wrap: wrap;
-  text-align: center;
-}
 
-.top-bar img {
-  width: 100px; /* حجم أكبر للشعار */
-  height: auto;
-}
+  .card {
+    padding: 22px;
+    font-size: 18px;
+  }
 
-.top-bar h1 {
-  font-size: 22px;
-  color: #5a00b0;
-  margin: 0;
+  .btn-enter {
+    font-size: 22px;
+    padding: 18px 24px;
+  }
+
+  a[href*="wa.me"] span {
+    font-size: 22px;
+    padding: 14px 20px;
+  }
+
+  #fixed-countdown {
+    font-size: 18px;
+    padding: 12px 18px;
+  }
 }
   </style>
 </head>
 <body>
 
-    <section class="top-bar">
-    <img src="https://i.imgur.com/UwPMIAg.png="شعار الجامعة">
+  <section class="top-bar">
+    <img src="https://i.imgur.com/dR3oOBY.png" alt="شعار الجامعة">
     <h1>بوابة دليل الطالب قسم المحاسبة</h1>
   </section>
 
@@ -234,30 +241,51 @@ body::after,
       <p>أو التواصل مع أحد مشرفي قروبات الواتساب الظاهرة أرقامهم داخل البوابة.</p>
       <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
 
-      <nav>
-        <a href="https://abdalmged71298-web.github.io/Accounting-majo/" class="btn-enter">دخول إلى البوابة</a>
-      </nav>
+    <nav>
+  <a href="https://abdalmged71298-web.github.io/Accounting-majo/" class="btn-enter">دخول إلى البوابة</a>
+</nav>
 
-      <div style="background-color:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#856404; font-size:18px; font-weight:bold; text-align:center; position:relative;">
-        ⚠️ <span style="font-size:20px;">تنبيه هام</span><br><br>
-        لطلب فتح حساب الرجاء التواصل مع أحد مشرفي قروبات المحاسبة وتزويدهم بالمعلومات اللازمة.
-        <div style="position:absolute; top:-10px; right:-10px; background-color:#ffc107; color:#fff; padding:5px 10px; border-radius:50px; font-size:14px; font-weight:bold;">
-          مهم
-        </div>
-      </div>
-    </div>
+<div style="
+  position: relative;
+  margin: 25px auto;
+  padding: 20px;
+  max-width: 700px;
+  background: radial-gradient(circle at top left, #fff8dc, #ffeeba);
+  border: 3px dashed #ffcc00;
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px rgba(255, 204, 0, 0.3), 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 17px;
+  color: #7a4e00;
+  font-family: 'Tahoma', sans-serif;
+">
+  ⚠️ <span style="font-size: 22px; font-weight: bold; color: #d35400;">تنبيه هام</span><br><br>
+  لطلب فتح حساب الرجاء التواصل مع أحد مشرفي قروبات المحاسبة وتزويدهم بالمعلومات اللازمة.
+  <div style="
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-family: 'Tahoma', sans-serif;
+  ">
+    مهم
+  </div>
+</div>
   </section>
 
   <div class="video-box">
-    <iframe src="https://drive.google.com/file/d/1hl6JFYSytILo0vgqZphgshsBUU7VYn6A
-/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe src="https://drive.google.com/file/d/1hl6JFYSytILo0vgqZphgshsBUU7VYn6A/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 
-  <!-- عداد تنازلي ثابت أعلى الصفحة -->
   <div id="fixed-countdown"></div>
 
   <script>
-    // التاريخ المحدد للاختبار (عدله حسب الحاجة)
     const examDate = new Date("December 6, 2025 01:00:00").getTime();
     const fixedCountdown = document.getElementById("fixed-countdown");
 
@@ -271,12 +299,7 @@ body::after,
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      fixedCountdown.innerHTML =
-        `🕒 الوقت المتبقي للاختبارات: ${days} يوم`;
+      fixedCountdown.innerHTML = `🕒 الوقت المتبقي للاختبارات: ${days} يوم`;
     }, 1000);
   </script>
 
