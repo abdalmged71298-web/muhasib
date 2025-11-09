@@ -238,10 +238,59 @@ a[href*="wa.me"] span {
       </a>
       <p>أو التواصل مع أحد مشرفي قروبات الواتساب الظاهرة أرقامهم داخل البوابة.</p>
       <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
-
-    <nav>
-  <a href="https://mohisib.netlify.app/" class="btn-enter">دخول إلى البوابة</a>
+<nav>
+  <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
 </nav>
+
+<!-- ===== المربع المنبثق ===== -->
+<div id="overlayNotice" class="hidden" style="
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 24px;
+  max-width: 600px;
+  width: 90%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  color: #333;
+  text-align: right;
+">
+  <h3 style="color:#7b2cbf;">مواصلة الدخول إلى البوابة</h3>
+  <p>تحية طيبة لجميع الطلاب،</p>
+  <p>لضمان وصولكم السلس والمباشر لبوابة دليل الطالب الخاصة بالطلاب <strong>https://muhasib.netlify.app/</strong></p>
+  <p>نرجو منكم استخدام متصفح <strong>مايكروسوفت إيدج (Microsoft Edge)</strong> أو تجربة متصفح إنترنت آخر غير <strong>جوجل كروم</strong>.</p>
+  <p>قد يظهر متصفح جوجل كروم تحذيرات أمنية غير دقيقة. استخدام Edge يضمن تجربة مثالية.</p>
+  <p>🔗 <strong>روابط تحميل Microsoft Edge:</strong></p>
+  <ul>
+    <li>iOS: <a href="https://apps.apple.com/us/app/microsoft-edge/id1288723196" target="_blank">App Store</a></li>
+    <li>Android: <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank">Google Play</a></li>
+  </ul>
+  <div style="margin-top:16px; text-align:center;">
+    <a href="https://muhasb.netlify.app/" target="_blank" style="background:#7b2cbf; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">مواصلة الدخول إلى البوابة</a>
+    <br><br>
+    <button onclick="hideOverlay()" style="margin-top:10px; background:#ccc; color:#333; padding:6px 12px; border:none; border-radius:6px;">إغلاق</button>
+  </div>
+</div>
+
+<script>
+  function showOverlay() {
+    document.getElementById('overlayNotice').classList.remove('hidden');
+  }
+
+  function hideOverlay() {
+    document.getElementById('overlayNotice').classList.add('hidden');
+  }
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
 
 <div style="
   position: relative;
