@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>بوابة دليل الطالب قسم المحاسبة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Open Graph -->
   <meta property="og:locale" content="ar_AR">
@@ -17,191 +18,148 @@
   <meta name="twitter:title" content="بوابة دليل الطالب قسم المحاسبة">
   <meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
   <meta name="twitter:image:alt" content="شعار بوابة دليل الطالب">
-</head>
+
   <style>
-   /* إعدادات عامة */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    :root {
+      --main-color: #5a00b0;
+      --accent-color: #0099cc;
+      --font-base: "Tahoma", sans-serif;
+    }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom, #e0f7ff, #e6e0ff);
-  font-family: "Tahoma", sans-serif;
-  color: #222;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* الشريط العلوي */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
-  background: linear-gradient(to right, #cce6ff, #d9ccff);
-  flex-wrap: wrap;
-  text-align: center;
-}
+    html, body {
+      width: 100%;
+      background: linear-gradient(to bottom, #e0f7ff, #e6e0ff);
+      font-family: var(--font-base);
+      color: #222;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-.top-bar img {
-  width: 150px;
-  height: auto;
-}
+    .top-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: linear-gradient(to right, #cce6ff, #d9ccff);
+      text-align: center;
+    }
 
-.top-bar h1 {
-  font-size: 35px;
-  color: #5a00b0;
-  margin: 0;
-}
+    .top-bar img {
+      width: 100px;
+      height: auto;
+    }
 
-/* قسم الترحيب */
-.welcome {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-  line-height: 1.8;
-  font-size: 17px;
-  text-align: center;
-  color: #333;
-}
+    .top-bar h1 {
+      font-size: 1.6rem;
+      color: var(--main-color);
+    }
 
-/* صندوق الفيديو */
-.video-box {
-  max-width: 800px;
-  margin: 20px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    .welcome, .card, .video-box, #fixed-countdown {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 16px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-.video-box iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  display: block;
-}
+    .welcome h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
 
-/* البطاقة */
-.card {
-  background: #ffffff;
-  margin: 30px auto;
-  padding: 25px;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  text-align: center;
-  font-size: 17px;
-}
+    .card h2 {
+      color: var(--main-color);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
 
-.card h2 {
-  color: #5a00b0;
-  margin-bottom: 12px;
-}
+    .card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
 
-.card p {
-  font-style: italic;
-  color: #666;
-  line-height: 1.6;
-}
+    .btn-enter {
+      display: block;
+      margin: 20px auto;
+      padding: 14px 24px;
+      background: linear-gradient(to right, var(--main-color), var(--accent-color));
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      width: 80%;
+      transition: 0.3s ease;
+    }
 
-/* زر الدخول */
-.btn-enter {
-  display: block;
-  margin: 20px auto;
-  padding: 20px 35px;
-  background: linear-gradient(to right, #5a00b0, #0099cc);
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  text-align: center;
-  transition: 0.3s ease;
-  width: 50%;
-}
+    .btn-enter:hover {
+      background: linear-gradient(to right, #7a33cc, #00bfff);
+    }
 
-.btn-enter:hover {
-  background: linear-gradient(to right, #7a33cc, #00bfff);
-}
+    a[href*="wa.me"] span {
+      display: block;
+      font-size: 1rem;
+      padding: 12px 16px;
+      background-color: #e6f3ff;
+      color: #007bff;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 10px auto;
+      width: 80%;
+    }
 
-/* تبويب رقم التواصل */
-a[href*="wa.me"] span {
-  font-size: 20px;
-  padding: 20px 25px;
-  display: block;
-  text-align: center;
-  width: 30%;
-  margin: 15px auto;
-  background-color: #e6f3ff;
-  color: #007bff;
-  font-weight: bold;
-  border-radius: 8px;
-}
+    .video-box iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+    }
 
-/* العد التنازلي */
-#fixed-countdown {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 25px;
-  font-weight: bold;
-  color: #5a00b0;
-  z-index: 9999;
-  background: rgba(255,255,255,0.8);
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-align: center;
-  width: 40%;
-  white-space: nowrap;
-}
+    #fixed-countdown {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--main-color);
+      background: rgba(255,255,255,0.9);
+      padding: 10px 14px;
+      border-radius: 8px;
+      width: 80%;
+      z-index: 9999;
+    }
 
-/* استجابة للجوال */
-@media (max-width: 600px) {
-  .top-bar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 12px;
-  }
+    #overlayNotice {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      font-family: var(--font-base);
+      color: #333;
+      text-align: right;
+    }
 
-  .top-bar img {
-    width: 100px;
-  }
-
-  .top-bar h1 {
-    font-size: 26px;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  .welcome {
-    font-size: 18px;
-    padding: 0 15px;
-  }
-
-  .card {
-    padding: 22px;
-    font-size: 18px;
-  }
-
-  .btn-enter {
-    font-size: 22px;
-    padding: 18px 24px;
-  }
-
-  a[href*="wa.me"] span {
-    font-size: 22px;
-    padding: 14px 20px;
-  }
-
-  #fixed-countdown {
-    font-size: 18px;
-    padding: 12px 18px;
-  }
-}
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -214,7 +172,10 @@ a[href*="wa.me"] span {
   <div class="welcome">
     <h2>مرحباً بكم أعزائنا الطلاب 👋</h2>
     <p>
-      هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة، حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية، والقنوات التعليمية، والجداول الزمنية، ومعرفة كل جديد، إضافةً إلى شروحات ووسائل مساعدة متعددة. نؤكد أن هذا العمل اجتهاد طلابي وليس له أي صلة رسمية بإدارة الجامعة.
+      هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة،<p>
+ حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية، والقنوات التعليمية، والجداول الزمنية، ومعرفة كل جديد،<p>
+ إضافةً إلى شروحات ووسائل مساعدة متعددة.<p>
+ نؤكد أن هذا العمل اجتهاد طلابي وليس له أي صلة رسمية بإدارة الجامعة.
     </p>
   </div>
 
@@ -231,99 +192,33 @@ a[href*="wa.me"] span {
       <p>
         لأي ملاحظات أو طلب تعديل، يمكنكم التواصل مع مسؤول البوابة عبدالمجيد المنيعي عبر:
       </p>
-      <a href="https://wa.me/966535378082" target="_blank" style="text-decoration:none;">
-        <span style="display:inline-block; background-color:#e6f3ff; padding:6px 10px; border-radius:6px; color:#007bff; font-weight:bold;">
-          📱 للتواصل اضغط هنا
-        </span>
+      <a href="https://wa.me/966535378082" target="_blank">
+        <span>📱 للتواصل اضغط هنا</span>
       </a>
       <p>أو التواصل مع أحد مشرفي قروبات الواتساب الظاهرة أرقامهم داخل البوابة.</p>
       <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
-<nav>
-  <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
-</nav>
+      <nav>
+        <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
+      </nav>
+    </div>
 
-<!-- ===== المربع المنبثق ===== -->
-<div id="overlayNotice" class="hidden" style="
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  padding: 24px;
-  max-width: 600px;
-  width: 90%;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-  color: #333;
-  text-align: right;
-">
-  <h3 style="color:#7b2cbf;">مواصلة الدخول إلى البوابة</h3>
-  <p>تحية طيبة لجميع الطلاب،</p>
-  <p>لضمان وصولكم السلس والمباشر لبوابة دليل الطالب الخاصة بالطلاب <strong>https://muhasib.netlify.app/</strong></p>
-  <p>نرجو منكم استخدام متصفح <strong>مايكروسوفت إيدج (Microsoft Edge)</strong> أو تجربة متصفح إنترنت آخر غير <strong>جوجل كروم</strong>.</p>
-  <p>قد يظهر متصفح جوجل كروم تحذيرات أمنية غير دقيقة. استخدام Edge يضمن تجربة مثالية.</p>
-  <p>🔗 <strong>روابط تحميل Microsoft Edge:</strong></p>
-  <ul>
-    <li>iOS: <a href="https://apps.apple.com/us/app/microsoft-edge/id1288723196" target="_blank">App Store</a></li>
-    <li>Android: <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank">Google Play</a></li>
-  </ul>
-  <div style="margin-top:16px; text-align:center;">
-    <a href="https://muhsaebon.netlify.app/" target="_blank" style="background:#7b2cbf; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">مواصلة الدخول إلى البوابة</a>
-    <br><br>
-    <button onclick="hideOverlay()" style="margin-top:10px; background:#ccc; color:#333; padding:6px 12px; border:none; border-radius:6px;">إغلاق</button>
-  </div>
-</div>
-
-<script>
-  function showOverlay() {
-    document.getElementById('overlayNotice').classList.remove('hidden');
-  }
-
-  function hideOverlay() {
-    document.getElementById('overlayNotice').classList.add('hidden');
-  }
-</script>
-
-<style>
-  .hidden {
-    display: none;
-  }
-</style>
-
-<div style="
-  position: relative;
-  margin: 25px auto;
-  padding: 20px;
-  max-width: 700px;
-  background: radial-gradient(circle at top left, #fff8dc, #ffeeba);
-  border: 3px dashed #ffcc00;
-  border-radius: 16px;
-  box-shadow: inset 0 0 12px rgba(255, 204, 0, 0.3), 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  font-size: 17px;
-  color: #7a4e00;
-  font-family: 'Tahoma', sans-serif;
-">
-  ⚠️ <span style="font-size: 22px; font-weight: bold; color: #d35400;">تنبيه هام</span><br><br>
-  لطلب فتح حساب الرجاء التواصل مع أحد مشرفي قروبات المحاسبة وتزويدهم بالمعلومات اللازمة.
-  <div style="
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    background-color: #ff9800;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    font-family: 'Tahoma', sans-serif;
-  ">
-    مهم
-  </div>
-</div>
+    <div id="overlayNotice">
+      <h3 style="color:#7b2cbf;">مواصلة الدخول إلى البوابة</h3>
+      <p>تحية طيبة لجميع الطلاب،</p>
+      <p>لضمان وصولكم السلس والمباشر لبوابة دليل الطالب الخاصة بالطلاب <strong>https://muhasib.netlify.app/</strong></p>
+      <p>نرجو منكم استخدام متصفح <strong>مايكروسوفت إيدج (Microsoft Edge)</strong> أو تجربة متصفح إنترنت آخر غير <strong>جوجل كروم</strong>.</p>
+      <p>قد يظهر متصفح جوجل كروم تحذيرات أمنية غير دقيقة. استخدام Edge يضمن تجربة مثالية.</p>
+      <p>🔗 <strong>روابط تحميل Microsoft Edge:</strong></p>
+      <ul>
+        <li>iOS: <a href="https://apps.apple.com/us/app/microsoft-edge/id1288723196" target="_blank">App Store</a></li>
+        <li>Android: <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank">Google Play</a></li>
+      </ul>
+           <div style="margin-top:16px; text-align:center;">
+        <a href="https://muhasibon.netlify.app/" target="_blank" style="background:#7b2cbf; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">مواصلة الدخول إلى البوابة</a>
+        <br><br>
+        <button onclick="hideOverlay()" style="margin-top:10px; background:#ccc; color:#333; padding:6px 12px; border:none; border-radius:6px;">إغلاق</button>
+      </div>
+    </div>
   </section>
 
   <div class="video-box">
@@ -333,6 +228,14 @@ a[href*="wa.me"] span {
   <div id="fixed-countdown"></div>
 
   <script>
+    function showOverlay() {
+      document.getElementById('overlayNotice').style.display = 'block';
+    }
+
+    function hideOverlay() {
+      document.getElementById('overlayNotice').style.display = 'none';
+    }
+
     const examDate = new Date("December 6, 2025 01:00:00").getTime();
     const fixedCountdown = document.getElementById("fixed-countdown");
 
