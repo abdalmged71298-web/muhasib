@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>بوابة دليل الطالب قسم المحاسبة</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph -->
+<meta property="og:locale" content="ar_AR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="بوابة دليل الطالب قسم المحاسبة">
+<meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكرة لكل مادة ومشاريعهم الجامعية.">
+<meta property="og:url" content="https://muhasib.netlify.app/">
+<meta property="og:image" content="https://i.imgur.com/dR3oOBY.png">
+<meta property="og:image:alt" content="شعار بوابة دليل الطالب">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
-  <!-- Open Graph -->
-  <meta property="og:locale" content="ar_AR">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="بوابة دليل الطالب قسم المحاسبة">
-  <meta property="og:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
-  <meta property="og:url" content="https://muhasib.netlify.app/">
-  <meta property="og:image:alt" content="شعار بوابة دليل الطالب">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="بوابة دليل الطالب قسم المحاسبة">
-  <meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكر لكل مادة ومشاريعهم الجامعية.">
-  <meta name="twitter:image:alt" content="شعار بوابة دليل الطالب">
-
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="بوابة دليل الطالب قسم المحاسبة">
+<meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكرة لكل مادة ومشاريعهم الجامعية.">
+<meta name="twitter:image" content="https://i.imgur.com/dR3oOBY.png">
+<meta name="twitter:image:alt" content="شعار بوابة دليل الطالب">
   <style>
     :root {
       --main-color: #5a00b0;
@@ -42,15 +39,15 @@
     }
 
     .top-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding: 16px;
-      background: linear-gradient(to right, #cce6ff, #d9ccff);
-      text-align: center;
-    }
-
+  display: flex;
+  flex-direction: row; /* ✅ بدل column إلى row */
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(to right, #cce6ff, #d9ccff);
+  text-align: center;
+  justify-content: center; /* لإبقاء العناصر في المنتصف */
+}
     .top-bar img {
       width: 100px;
       height: auto;
@@ -126,7 +123,7 @@
 
     #fixed-countdown {
       position: fixed;
-      bottom: 10px;
+      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 1rem;
@@ -172,15 +169,13 @@
   <div class="welcome">
     <h2>مرحباً بكم أعزائنا الطلاب 👋</h2>
     <p>
-      هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة،<p>
+هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة<p>
  حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية، والقنوات التعليمية، والجداول الزمنية، ومعرفة كل جديد،<p>
  إضافةً إلى شروحات ووسائل مساعدة متعددة.<p>
+إضافة الى وجود اداة مساعدة للطلاب لاختيار موادهم الدراسية تسهيلا لهم من خلال تجارب سابقة مع بعض الطلاب واجتهادات شخصية. <p>
  نؤكد أن هذا العمل اجتهاد طلابي وليس له أي صلة رسمية بإدارة الجامعة.
     </p>
-  </div>
-
-  <section>
-    <div class="card">
+ 
       <h2>تنويه من المصمم</h2>
       <p>
         إخواني وزملائي الكرام 🌹، هذا الملف من تصميم أخوكم وزميلكم
@@ -197,10 +192,18 @@
       </a>
       <p>أو التواصل مع أحد مشرفي قروبات الواتساب الظاهرة أرقامهم داخل البوابة.</p>
       <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
-      <nav>
-        <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
-      </nav>
-    </div>
+     <nav>
+
+    <!-- زر اختيار المواد الجديد -->
+    <a href="index (3).html" class="btn-enter" style="margin-bottom:10px; display:block;">
+        اختيار المواد
+    </a>
+
+    <!-- زر دخول البوابة الأصلي -->
+    <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
+
+</nav>
+</div>
 
     <div id="overlayNotice">
       <h3 style="color:#7b2cbf;">مواصلة الدخول إلى البوابة</h3>
@@ -214,44 +217,92 @@
         <li>Android: <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank">Google Play</a></li>
       </ul>
            <div style="margin-top:16px; text-align:center;">
-        <a href="https://muhasibon.netlify.app/" target="_blank" style="background:#7b2cbf; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">مواصلة الدخول إلى البوابة</a>
+        <a href="https://accountantsss.netlify.app/" target="_blank" style="background:#7b2cbf; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">مواصلة الدخول إلى البوابة</a>
         <br><br>
         <button onclick="hideOverlay()" style="margin-top:10px; background:#ccc; color:#333; padding:6px 12px; border:none; border-radius:6px;">إغلاق</button>
       </div>
     </div>
   </section>
 
+
   <div class="video-box">
     <iframe src="https://drive.google.com/file/d/1hl6JFYSytILo0vgqZphgshsBUU7VYn6A/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 
   <div id="fixed-countdown"></div>
+<script>
+  // دوال الإشعار العلوي كما في الكود القديم
+  function showOverlay() {
+    document.getElementById('overlayNotice').style.display = 'block';
+  }
 
-  <script>
-    function showOverlay() {
-      document.getElementById('overlayNotice').style.display = 'block';
-    }
+  function hideOverlay() {
+    document.getElementById('overlayNotice').style.display = 'none';
+  }
 
-    function hideOverlay() {
-      document.getElementById('overlayNotice').style.display = 'none';
-    }
+  // التاريخ المحدد للاختبار (عدّله كما تريد)
+  const examDate = new Date("Apr 11, 2026 08:00:00");
 
-    const examDate = new Date("December 6, 2025 01:00:00").getTime();
+  function formatMonths(m) {
+    if (m === 0) return "0 شهر";
+    if (m === 1) return "شهر واحد";
+    if (m === 2) return "شهران";
+    if (m >= 3 && m <= 10) return `${m} أشهر`;
+    return `${m} شهر`;
+  }
+
+  function formatDays(d) {
+    if (d === 0) return "0 يوم";
+    if (d === 1) return "يوم واحد";
+    if (d === 2) return "يومان";
+    if (d >= 3 && d <= 10) return `${d} أيام`;
+    return `${d} يوم`;
+  }
+
+  function updateCountdown() {
     const fixedCountdown = document.getElementById("fixed-countdown");
+    if (!fixedCountdown) return; // حماية لو العنصر غير موجود
 
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = examDate - now;
+    const now = new Date();
 
-      if (distance < 0) {
-        fixedCountdown.innerHTML = "✅ انتهت فترة الاختبارات";
-        return;
+    // إذا انتهت فترة الاختبارات
+    if (now.getTime() > examDate.getTime()) {
+      fixedCountdown.innerHTML = "✅ انتهت فترة الاختبارات";
+      return;
+    }
+
+    // نسخ التاريخين حتى نعدل عليهم بدون التأثير على الأصل
+    let start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    let end = new Date(examDate.getFullYear(), examDate.getMonth(), examDate.getDate());
+
+    let months = 0;
+
+    // حساب الأشهر بدقة حسب التقويم
+    while (
+      start.getFullYear() < end.getFullYear() ||
+      start.getMonth() < end.getMonth()
+    ) {
+      start.setMonth(start.getMonth() + 1);
+      if (start > end) {
+        start.setMonth(start.getMonth() - 1);
+        break;
       }
+      months++;
+    }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      fixedCountdown.innerHTML = `🕒 الوقت المتبقي للاختبارات: ${days} يوم`;
-    }, 1000);
-  </script>
+    // حساب الأيام المتبقية
+    const days = Math.floor((end - start) / (1000 * 60 * 60 * 24));
+
+    fixedCountdown.innerHTML =
+      `🕒 الوقت المتبقي للاختبارات: ${formatMonths(months)} و ${formatDays(days)}`;
+  }
+
+  // تأكد أن الكود يعمل بعد تحميل العناصر
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+</script>
 
 </body>
 </html>
