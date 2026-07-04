@@ -16,6 +16,15 @@
 <meta name="twitter:description" content="منصة تجمع جهود الطلبة من ملخصات ونماذج وشروحات وطريقة المذاكرة لكل مادة ومشاريعهم الجامعية.">
 <meta name="twitter:image" content="https://i.imgur.com/dR3oOBY.png">
 <meta name="twitter:image:alt" content="شعار بوابة دليل الطالب">
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- إصلاح مشكلة الرموز الغريبة والخط غير المفهوم وتفعيل العربية -->
+  <meta charset="UTF-8">
+  
+  <!-- إصلاح مشكلة الخط الصغير في الجوال وجعله متناسقاً -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     :root {
       --main-color: #5a00b0;
@@ -39,15 +48,16 @@
     }
 
     .top-bar {
-  display: flex;
-  flex-direction: row; /* ✅ بدل column إلى row */
-  align-items: center;
-  gap: 12px;
-  padding: 16px;
-  background: linear-gradient(to right, #cce6ff, #d9ccff);
-  text-align: center;
-  justify-content: center; /* لإبقاء العناصر في المنتصف */
-}
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: linear-gradient(to right, #cce6ff, #d9ccff);
+      text-align: center;
+      justify-content: center; 
+    }
+
     .top-bar img {
       width: 100px;
       height: auto;
@@ -168,6 +178,12 @@
 
   <div class="welcome">
     <h2>مرحباً بكم أعزائنا الطلاب 👋</h2>
+
+
+    <!-- زر دخول البوابة الأصلي -->
+  <a href="#" class="btn-enter" onclick="showOverlay()">🌐 الدخول إلى البوابة </a>
+    </nav>
+
     <p>
 هذه البوابة صُممت بجهود طلابية شخصية، لتكون صرحًا متكاملًا لمعلومات الطلاب في تخصص المحاسبة<p>
  حيث يمكنكم من خلالها متابعة المتطلبات الجامعية والتخصصية، والقنوات التعليمية، والجداول الزمنية، ومعرفة كل جديد،<p>
@@ -194,10 +210,7 @@
       <p>انتقل إلى أسفل الشاشة لمشاهدة فيديو توضيحي عن كيفية عمل البوابة 👇</p>
      <nav>
 
-  
-
-    <!-- زر دخول البوابة الأصلي -->
-    <a href="#" class="btn-enter" onclick="showOverlay()">دخول إلى البوابة</a>
+   
 
 </nav>
 </div>
